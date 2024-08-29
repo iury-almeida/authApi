@@ -1,7 +1,7 @@
 'use strict';
 
-const animalRoutes = require('../src/api/auth/authRoutes');
+const authRoutes = require('../src/api/auth/authRoutes');
 
 module.exports = (app) => {
-    animalRoutes(app);
+    authRoutes(app);
 }
