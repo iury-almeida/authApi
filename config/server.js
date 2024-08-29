@@ -1,15 +1,14 @@
-'use strict';
+import express from 'express';
+import cors from 'cors';
+import route from './registerRoutes.js';
+import dotenv from 'dotenv';
 
-const express = require('express'),
-    app = express(),
-    cors = require('cors'),
-    bodyParser = require('body-parser');
+const app = express()
 
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
-app.use(bodyParser());
 
-require('dotenv').config({ path: '.env' });
-require('./registerRoutes')(app);
+dotenv.config({ path: '.env' });
+route(app);
 
-module.exports = app;
+export default app;

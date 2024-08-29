@@ -1,7 +1,6 @@
-'use strict';
 
-const authRoutes = require('../src/api/auth/authRoutes');
+import authRoutes from '../src/api/auth/authRoutes.js';
 
-module.exports = (app) => {
+export default (app) => {
     authRoutes(app);
 }

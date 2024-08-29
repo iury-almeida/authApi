@@ -1,8 +1,7 @@
-'use strict';
 
-const authController = require('./authController');
+import authController  from './authController.js';
 
-module.exports = (app) => {
+export default (app) => {
     // app.post('/animal', Controller.create);
     // app.put('/:_id', Controller.update);
     app.get('/login', authController.login);

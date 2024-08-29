@@ -1,5 +1,3 @@
-'use strict';
-
 async function login(req, res) {
     try {
         if (req.headers.user == 'test' && req.headers.password == '123') {
@@ -23,7 +21,4 @@ async function token(req, res) {
     }
 }
 
-module.exports = {
-    login, 
-    token
-}
+export default {login, token}

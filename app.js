@@ -1,17 +1,11 @@
-'use strict';
+import app from './config/server.js';
+import sequelize from "./config/sequelize.js";
 
-const app = require('./config/server');
-const testConnection = require(`./config/sequelize`);
-const database = require("./config/sequelize");
-
-const user = require("./config/dbSequelize");
+import user from "./config/dbSequelize.js";
 
 (async () => {
-    
-    await database.sync();
+    await sequelize.sync();
 })()
-
-
 
 app.listen(process.env.APIPORT || process.env.PORT, () => {
     console.log('App is listening on port ', process.env.APIPORT || process.env.PORT);
